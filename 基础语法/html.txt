@@ -1,0 +1,64 @@
+1.跳出框架的含义-Unite3-Chapter3
+2.框架中noframes的作用
+3.<dl> 标签定义了定义列表（definition list）。
+<dl> 标签用于结合 <dt> （定义列表中的项目）和 <dd> （描述列表中的项目）
+4.域中name的作用：后台程序，比如ASP。通过这个属性来取得控件的值
+4.域中value：<input type="checkbox"> 和 <input type="radio"> 中必须设置 value 属性
+5.如果采用 POST 方法，浏览器将会按照下面两步来发送数据。首先，浏览器将与 action 属性中指定的表单处理服务器建立联系，一旦建立连接之后，浏览器就会按分段传输的方法将数据发送给服务器。在服务器端，一旦 POST 样式的应用程序开始执行时，就应该从一个标志位置读取参数，而一旦读到参数，在应用程序能够使用这些表单值以前，必须对这些参数进行解码。用户特定的服务器会明确指定应用程序应该如何接受这些参数。
+另一种情况是采用 GET 方法，这时浏览器会与表单处理服务器建立连接，然后直接在一个传输步骤中发送所有的表单数据：浏览器会将数据直接附在表单的 action URL 之后。这两者之间用问号进行分隔。
+6.图片映射怎么知道坐标
+7.使用 <span> 元素对文本中的一部分进行着色
+8.lang：en英语；zh-CN中文
+9.<meta charset="UTF-8"><!--UTF-8为万国码-->
+10.相对路径:以引用文件所在位置为参考基础，而建立出的目录路径。简单来说，就是图片相对于html页面的位置
+（1.同一级：img.jpg；2。下一级：image / img.jpg 3.上一级:../img.jpg）
+11.绝对路径：目录下的绝对路径，从网盘开始，绝对路径以“\"，而相对路径以"/“
+12.内部链接：可以直接输入同级目录文件夹的网站
+13.空连接：<a href="#"></a>
+14.下载链接：地址是一个文件或压缩包（.exe 或.zip）
+15.锚点链接：<a href="#1"></a>       <p id="1"></p>
+16.表格作用：展示数据。（table,th,tr,td）(thead:表格头部；tbody:表格主体）
+17.表单元素：type:text;password;radio：单选按钮；checkbox:多选按钮；(radio 和 checkbox必须有相同的name值，才能实现多选一。checked属性是radio和checkbox有的属性) ;submit;reset; button(经常与js一起使用)；                         value：值                     maxlength：最大值;                      
+18. lable标签，标签用于绑定一个表单元素，当点击<label>标签内的文本时，浏览器就会自动将焦点转到或者选择对应的表单元素上，用来增加用户体验。 使用方法：<label for="nan">男：</label><input type="radio",id="nan">(id与for一定要对应)
+19.用户输入内容较多的情况下，我们就不能使用文本框表单了，此时我们可以使用<textarea>(cols  rows)
+20.标签选择器： p{                。。。。。。。。。。。。。。}
+21.类选择器：  .red {bgcolor:red}     p.red  可以使用多类名<div class="red font"(既调用了red 也调用了font，但中间必须要一个空格)
+22.id选择器： #id{                    ...........................} <div id="    ">（只能调用一次，别人切勿使用）（经常与js搭配使用）
+23.通配符选择器：*{                        ...................}它表示选择页面中所有元素（不需要调用，自动给所有元素使用样式）
+ 24.符合属性：必须按照以下顺序简写{font-stle font weight font-size/line-height font-family}（简写size,family必须有）
+25.text-indent:2em=32px=2个字符大小                                 line-height：26px行间距（上间距和下间距和文本高度总共26px）
+26.内部样式表<style></style>
+27.行内样式表：<p style="color:red ...............................">
+28.外部样式表：<link rel="stylesheet"  href="style.css"
+29.emmet语法：1.div +table；2.div*3 +table；3.ul>li +table；4.div+p +table；5.p.demo or div#two +table；6..div$*3 +table；7.div{.................} +table
+30.后代选择器：ol li{                     。。。。。。。。。。。。。。。。。。}    或.nav ol li{.....................                 }可以选择父元素里面的子元素
+31.子选择器：选择某元素的最近一个元素,即亲儿子选择器                        ol>li{....................                           }
+32.并集选择器：div，p{ 。。。。。。。。。。。。。。。。。。。。。           }选择多组标签，同时为他们定义相同的样式（喜欢竖着写，最后一个选择器不需要加逗号）
+33.伪类选择器：用于向某些选择器添加特殊的效果   a:link{   把没有访问过的链接}   a:visited{访问过的链接    }    a:hover{鼠标经过的链接}  a:active{正在按下还没有弹起鼠标的那个链接}    （最好按照这个顺序来写：love hate；需要给a单独指定样式；一般只用设置a和a:hover)
+34.input:focus {        bg-color:red; }            用于选取获得焦点的表单
+35.行内块元素：<img/><input/><td>
+36.将行内元素转换为块内元素：a{display：block}
+37. 将块内元素转为行内元素：div{display：inline}
+38.将行内元素转换为行内块元素：span{display：inline-block}
+39.background简写顺序：color；image；repeat；attachment；position
+40.层叠性：相同选择器给设置相同的样式，此时一个样式就会覆盖（层叠）另一个冲突的样式。主要解决样式冲突的问题。
+41.继承性：子标签会继承父标签的某些样式 （和文字相关的样式）（行高可以跟单位也可以不跟单位，当不跟单位时就时font-size的多少倍）
+43.优先性（！important>行内样式 style=“”>ID选择器>类选择器,伪类选择器>元素选择器>继承或*）
+div { color:red !important}（优先级最高）
+ul li {color:red} 权重：0001+0001=0002                 li {color:green}  权重：0001              0002>0001
+
+42.背景半透明的效果：background:rgba(0,0,0,0.3)最后一个参数为alpha透明度，取值范围在0-1之间。
+
+
+
+
+
+
+
+
+
+
+
+
+
+

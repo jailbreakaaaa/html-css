@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .back {
+            height: 280px;
+            width: 448px;
+            background-color: pink;
+            position: relative;
+            left: 50%;
+            margin-left: -224px;
+        }
+        
+        .back img {
+            width: 100%;
+            height: 100%;
+        }
+        /*如果想要添加的盒子或图片与父盒子一样大，则只需width：100%；height：100%;*/
+        
+        .hide {
+            height: 280px;
+            width: 448px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            background-image: url("2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            display: none;
+        }
+        /*当鼠标经过土豆这个盒子时，就让里面遮罩层显示出来*/
+        
+        .back:hover .hide {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="hide"></div>
+        <img src="下载.jpg">
+    </div>
+</body>
+
+</html>

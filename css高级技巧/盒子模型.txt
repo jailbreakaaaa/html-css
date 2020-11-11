@@ -1,0 +1,9 @@
+核心：利用CSS摆位置
+盒子模型组成：margin（简写方法与padding一致  margin：0 auto 左右居中）  border（简写顺序：width、style、color）（border-collapse：collapse合并相邻的边框）  content padding（简写：1px代表上下左右1px；1px 2px代表上下1px 左右2px；1px 2px 3px代表上1px 左右2px 下3px；1px 2px 3px 4px代表上1px 右2px 下3px 左4px（顺时针  ））（padding和border都会影响盒子大小，不指定width和height，则padding不影响盒子大小）
+避免盒子嵌套过程中外边距合并：1.为父元素定义边框
+			2.为父元素定义内边距
+			3.为父元素添加overflow：hidden
+网页元素很多有默认的内外边距，因此，我们在布局前，首先要清楚网页元素的内外边距
+圆角边框：border-radius；半径为10px的圆与边框的交集；当半径为盒子宽度的一半就为一个圆形盒子，当然必须原来盒子为正方形；（左上，右上，右下，左下）
+盒子阴影：box-shalow（h-shalow v-shalow blur(模糊距离) spread（阴影的尺寸）color inset、outset（内影、外影）（不能写outset，默认为outset） ）
+文字阴影：text-shalow（h-shalow v-shalow blur color）

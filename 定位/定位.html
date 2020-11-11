@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .one {
+            width: 520px;
+            height: 280px;
+            background-image: url("下载.jpg");
+            margin: 100px auto;
+            position: relative;
+        }
+        /*使用并集选择器*/
+        
+        .prev,
+        .next {
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            text-align: center;
+            line-height: 30px;
+            color: blanchedalmond;
+            text-decoration: none;
+        }
+        
+        .prev {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        
+        .next {
+            right: 0;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        
+        .nav {
+            position: absolute;
+            bottom: 48px;
+            background-color: crimson;
+            width: 70px;
+            height: 13px;
+            left: 50%;
+            margin: -35px;
+            border-radius: 6.5px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: #fff;
+            margin: 3px;
+        }
+        
+        .nav .selected {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <!--左侧按钮-->
+        <a href="#" class="prev">&lt;</a>
+        <!--右侧按钮-->
+        <a href="#" class="next">&gt;</a>
+        <!--下部分按钮-->
+        <ul class="nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<!--如果一个盒子既有left也有right，则默认执行left属性，同理bottom，top执行top属性-->
+<!--代码有大量重复部分，考虑使用并集选择器-->
